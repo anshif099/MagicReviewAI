@@ -3,11 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": ["backend"],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:api": "npm run dev --workspace backend",
+    "build:api": "npm run build --workspace backend",
+    "typecheck:api": "npm run typecheck --workspace backend",
+    "start:api": "npm run start --workspace backend"
   },
   "dependencies": {
     "react": "^19.3.1",
